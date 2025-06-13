@@ -1,156 +1,183 @@
-# 🚀 90-Day Django API, Async, and Admin Mastery Roadmap
+# Django REST Framework (DRF) Professional Roadmap
 
-> **90 Days to Master Django REST, Celery, and django-unfold—From Zero to Production Hero**
-
----
-
-## 📅 At a Glance
-
-- **Duration:** 90 Days (3 hours/day = 270 hours)
-- **What You’ll Learn:**  
-  - Build RESTful APIs with Django REST Framework (DRF)
-  - Handle async/background jobs with Celery
-  - Customize Django Admin with django-unfold
-  - Deploy a production-ready application
+_A professional, actionable roadmap for mastering Django REST Framework in 21 days. Each day covers core DRF concepts, best practices, and includes targeted "homework" for practical mastery._
 
 ---
 
-## 🛣️ The 90-Day Timeline
+## Table of Contents
 
-| Phase | Topic                          | Days | Hours |
-|-------|--------------------------------|------|-------|
-| 1     | Django REST Framework (DRF)    | 55   | 165   |
-| 2     | Celery with Django             | 18   | 54    |
-| 3     | django-unfold                  | 7    | 21    |
-| 4     | Review & Final Project         | 10   | 30    |
+- [Overview](#overview)
+- [Roadmap Table (21 Days)](#roadmap-table-21-days)
+- [Daily Breakdown](#daily-breakdown)
+- [Resources](#resources)
 
 ---
 
-## 📆 Detailed Roadmap
+## Overview
 
-### **Phase 1: Django REST Framework (DRF) — 55 Days**
-
-#### **Weeks 1-2 (Days 1–14): DRF Fundamentals**
-- **Days 1-2:** REST Principles, DRF Installation & Setup  
-- **Days 3-4:** Serializers (Simple & Model)
-- **Days 5-6:** Advanced Serializers (Nested, Validation)
-- **Days 7-8:** Views, APIView, ViewSets
-- **Days 9-10:** Routers & URL Routing
-- **Days 11-14:** 🛠️ **Mini Project 1:** CRUD API (e.g., Todo App)  
-  - **Goal:** Implement serializers, views, routers, test with Pytest, check style with flake8
-
-#### **Weeks 3-4 (Days 15–28): Authentication & Permissions**
-- **Days 15-16:** Session Authentication
-- **Days 17-18:** Token Authentication
-- **Days 19-20:** JWT Authentication
-- **Days 21-22:** Permissions (Built-in & Custom)
-- **Days 23-28:** 🛠️ **Mini Project 2:** Authenticated API  
-  - **Goal:** Secure endpoints, user roles, permission checks, thorough testing
-
-#### **Weeks 5-6 (Days 29–42): DRF Pro Power-Ups**
-- **Days 29-30:** Filtering, Searching, Ordering
-- **Days 31-32:** Pagination
-- **Days 33-34:** Versioning
-- **Days 35-36:** Throttling & Rate Limiting
-- **Days 37-38:** Testing APIs (unit/integration)
-- **Days 39-42:** Documentation (drf-yasg, Swagger UI)  
-  - **Goal:** Add pro features, improve API usability & docs
-
-#### **Weeks 7-8 (Days 43–56): Major DRF Project**
-- **Days 43-56:** 🛠️ **Project 3:** Complete API (e.g., Social App, Task Manager)  
-  - **Goal:** Combine all DRF features, full testing, professional documentation, >80% test coverage
+This roadmap is designed for developers looking to master Django REST Framework (DRF) with a structured, daily approach. Each day provides focused learning objectives and practical homework assignments to reinforce understanding.
 
 ---
 
-### **Phase 2: Celery with Django — 18 Days**
+## Roadmap Table (21 Days)
 
-#### **Weeks 9-10 (Days 57–70): Celery Basics & Integration**
-- **Days 57-58:** Celery Intro, Installation, Redis/RabbitMQ Setup
-- **Days 59-60:** Configure Celery with Django
-- **Days 61-62:** Writing & Running Celery Tasks
-- **Days 63-64:** Integrating Celery with DRF (background tasks, sending emails)
-- **Days 65-66:** Monitoring, Failures, Retries
-- **Days 67-70:** 🛠️ **Mini Project 4:** Async Features (notifications, data processing)  
-  - **Goal:** Integrate async jobs, test edge cases, ensure non-blocking APIs
-
----
-
-### **Phase 3: django-unfold — 7 Days**
-
-#### **Week 11 (Days 71–77): Next-Gen Django Admin**
-- **Days 71-72:** Install & Set Up django-unfold
-- **Days 73-74:** Basic Admin Customization (fields, themes)
-- **Days 75-76:** Advanced Admin Customization (dashboards, UX)
-- **Day 77:** 🛠️ **Mini Project 5:** Custom Admin UI  
-  - **Goal:** Make admin powerful & beautiful, test usability
-
----
-
-### **Phase 4: Review & Final Project — 10 Days**
-
-#### **Week 12–13 (Days 78–87): Build & Deploy**
-- **Days 78-87:** 🛠️ **Final Project:** Full-Stack App  
-  - **Goal:** Combine DRF, Celery, and django-unfold into a real product (e.g., Blog Platform or SaaS tool)
-  - **Bonus:** Dockerize the app, write deployment scripts
-
-#### **Days 88–90: Polish & Launch**
-- **Testing:** Full coverage with Pytest, Codecov  
-- **Review:** Rubric-based self-assessment (functionality, code quality, docs, deployment)
-- **Launch:** Deploy to production (Heroku, DigitalOcean, or AWS)
+| Day | Topic                                   | Key Objectives                                              | Homework / Practice                        |
+|-----|-----------------------------------------|-------------------------------------------------------------|--------------------------------------------|
+| 1   | DRF Overview & Setup                    | Intro, Install DRF, Project Setup                           | Create Django project, install DRF         |
+| 2   | DRF App Structure & Settings            | App structure, settings.py, INSTALLED_APPS                  | Configure DRF in settings.py               |
+| 3   | Serializers: Basics                     | Serializer classes, basic serialization                     | Create simple serializer                   |
+| 4   | Models & Serializers: Nested            | ModelSerializers, nested serializers                        | Build related models & serializers         |
+| 5   | Views: APIView & Response               | APIView, Response, request/response cycle                   | Write basic APIView                        |
+| 6   | Views: Generics                         | Generic views: ListAPIView, RetrieveAPIView, etc.           | Implement generic views                    |
+| 7   | Routers & ViewSets                      | ViewSets, routers, URL conf                                 | Refactor views using ViewSets              |
+| 8   | CRUD Operations                         | Full CRUD: Create, Read, Update, Delete                     | Implement all CRUD endpoints               |
+| 9   | Authentication: Basics                  | DRF Auth, TokenAuth, SessionAuth                            | Protect endpoints with authentication      |
+| 10  | Permissions & Throttling                | Permissions, custom permissions, throttling                 | Write custom permission class              |
+| 11  | Filtering & Searching                   | Filtering, search, ordering                                 | Add ordering & search to endpoints         |
+| 12  | Pagination                             | DRF pagination styles                                       | Add pagination to list views               |
+| 13  | Advanced Serializers                    | SerializerMethodField, custom validation                    | Add custom validation to serializers       |
+| 14  | Relationships & Hyperlinked             | HyperlinkedModelSerializer, related fields                  | Use hyperlinked relationships              |
+| 15  | Testing APIs                           | APIClient, APIRequestFactory, writing tests                 | Write tests for your API endpoints         |
+| 16  | Documentation: Swagger, Redoc           | auto-generated docs with drf-yasg or drf-spectacular        | Add Swagger/Redoc to project               |
+| 17  | Permissions: Object-level               | Object-level permissions, custom logic                      | Implement object-level permissions         |
+| 18  | Advanced Topics I: Signals, Hooks       | DRF signals, hooks, pre/post_save                           | Use signals for post-creation processing   |
+| 19  | Advanced Topics II: Caching, RateLimit  | Caching, API rate limiting                                  | Add caching to your API                    |
+| 20  | Deploying DRF APIs                      | Deploy with Gunicorn/UWSGI, Nginx, environment variables    | Deploy to Heroku, DigitalOcean, or similar |
+| 21  | Real Project & Review                   | Build a mini project, review concepts                       | Complete and document a capstone project   |
 
 ---
 
-## 📝 Daily Workflow
+## Daily Breakdown
 
-- **Hour 1:** Read docs/watch videos (official docs + pro tutorials)
-- **Hour 2:** Practice with exercises or mini-tasks
-- **Hour 3:** Build projects or review/extend existing work
+### Day 1: DRF Overview & Setup
+- **Objective**: Understand REST, install Django, DRF.
+- **Homework**:  
+   - Install Django and DRF.  
+   - Setup new project:  
+     ```bash
+     pip install django djangorestframework
+     django-admin startproject drf_project
+     ```
+
+### Day 2: DRF App Structure & Settings
+- **Objective**: Understand Django app structure, configure DRF.
+- **Homework**:  
+   - Create new app: `python manage.py startapp api`
+   - Add to `INSTALLED_APPS` in `settings.py`:
+     ```python
+     INSTALLED_APPS = [
+         # ...
+         'rest_framework',
+         'api',
+     ]
+     ```
+
+### Day 3: Serializers - Basics
+- **Objective**: Learn about serializers.
+- **Homework**:  
+   - Create a simple serializer in `api/serializers.py`.
+
+### Day 4: Models & Serializers - Nested
+- **Objective**: ModelSerializers, nested data.
+- **Homework**:  
+   - Add related models, create nested serializers.
+
+### Day 5: Views - APIView & Response
+- **Objective**: Use APIView, handle requests/responses.
+- **Homework**:  
+   - Write a basic APIView in `api/views.py`.
+
+### Day 6: Views - Generic Views
+- **Objective**: Use DRF generic views.
+- **Homework**:  
+   - Implement ListAPIView, RetrieveAPIView.
+
+### Day 7: Routers & ViewSets
+- **Objective**: Use routers & ViewSets.
+- **Homework**:  
+   - Refactor views using ViewSets and routers.
+
+### Day 8: CRUD Operations
+- **Objective**: Create full CRUD endpoints.
+- **Homework**:  
+   - Implement Create, Read, Update, Delete endpoints.
+
+### Day 9: Authentication - Basics
+- **Objective**: Learn authentication in DRF.
+- **Homework**:  
+   - Protect endpoints using TokenAuthentication.
+
+### Day 10: Permissions & Throttling
+- **Objective**: Permissions and throttling.
+- **Homework**:  
+   - Write and apply custom permissions.
+
+### Day 11: Filtering & Searching
+- **Objective**: Add filtering, search, and ordering.
+- **Homework**:  
+   - Add search and ordering to endpoints.
+
+### Day 12: Pagination
+- **Objective**: Use DRF pagination.
+- **Homework**:  
+   - Add pagination to list endpoints.
+
+### Day 13: Advanced Serializers
+- **Objective**: Custom fields & validation.
+- **Homework**:  
+   - Use `SerializerMethodField`, write custom validator.
+
+### Day 14: Relationships & Hyperlinked Serializers
+- **Objective**: Model relationships, use hyperlinked serializers.
+- **Homework**:  
+   - Refactor to `HyperlinkedModelSerializer`.
+
+### Day 15: Testing APIs
+- **Objective**: Test APIs with APIClient.
+- **Homework**:  
+   - Write unit tests for endpoints.
+
+### Day 16: Documentation - Swagger/Redoc
+- **Objective**: Auto-generate API docs.
+- **Homework**:  
+   - Integrate Swagger or Redoc using drf-yasg or drf-spectacular.
+
+### Day 17: Permissions - Object-level
+- **Objective**: Object-level permissions.
+- **Homework**:  
+   - Implement and apply object-level permissions.
+
+### Day 18: Advanced Topics I - Signals, Hooks
+- **Objective**: Use signals and hooks in DRF.
+- **Homework**:  
+   - Add a signal for post-save logic.
+
+### Day 19: Advanced Topics II - Caching, Rate Limiting
+- **Objective**: Improve performance.
+- **Homework**:  
+   - Add caching and rate limiting.
+
+### Day 20: Deploying DRF APIs
+- **Objective**: Deploy DRF project.
+- **Homework**:  
+   - Deploy on Heroku, DigitalOcean, etc.
+
+### Day 21: Real Project & Review
+- **Objective**: Build a mini-project, review all concepts.
+- **Homework**:  
+   - Complete a small REST API project and document it.
 
 ---
 
-## 📊 Progress Tracking
+## Resources
 
-Use a spreadsheet or Trello board to log:
-| Day | Topic | Hours | Status |
-|-----|-------|-------|--------|
-| 1   | DRF Install | 3 | ✅    |
-| ... | ...   | ...   | ...    |
-
----
-
-## 🧑‍💻 Resources
-
-- [Django REST Framework Docs](https://www.django-rest-framework.org/)
-- [Real Python: Celery with Django](https://realpython.com/asynchronous-tasks-with-django-and-celery/)
-- [Celery Docs](https://docs.celeryq.dev/en/stable/django/first-steps-with-django.html)
-- [django-unfold Docs](https://django-unfold.readthedocs.io/) | [Demo](https://unfold-admin.github.io/demo/)
-- [Full Stack Python: DRF](https://www.fullstackpython.com/django-rest-framework.html)
-- **Video:** Udemy, Coursera, YouTube  
-- **Practice:** LeetCode, HackerRank (Python)
+- [Official DRF Docs](https://www.django-rest-framework.org/)
+- [DRF Tutorial](https://www.django-rest-framework.org/tutorial/quickstart/)
+- [DRF - Advanced Features](https://www.django-rest-framework.org/topics/documenting-your-api/)
+- [Awesome Django REST Framework (GitHub)](https://github.com/encode/django-rest-framework)
+- [drf-yasg (Swagger for DRF)](https://github.com/axnsan12/drf-yasg)
+- [drf-spectacular (OpenAPI 3 for DRF)](https://github.com/tfranzel/drf-spectacular)
 
 ---
 
-## 🏅 Grading & Self-Assessment
-
-- **Testing:** Pytest, Codecov (>80% coverage)
-- **Style:** flake8 for PEP8 compliance
-- **Rubric:** Code quality, features, documentation, deployment
-- **Share:** Peer review on GitHub or dev forums
-
----
-
-## 💡 Pro Tips
-
-- Mix reading docs with hands-on coding
-- Make personal notes and code snippets
-- Build real mini-projects, not just follow tutorials
-- Review and refactor often
-
----
-
-## 🚀 Ready? Set. Django!
-
-This roadmap is your **launchpad**—commit, code, and create every day.  
-By Day 90, you’ll have the skills (and the portfolio) to stand out as a Django API, async, and admin pro!
-
----
+> **Tip:** Each day, read the official docs for the topic, implement the homework, and commit your code. By Day 21, you'll have a strong foundation in DRF and a portfolio-ready project!
